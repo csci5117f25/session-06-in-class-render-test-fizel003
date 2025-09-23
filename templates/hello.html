@@ -14,5 +14,17 @@
 {% if name %}
 <h2>and hello to {{name}}</h2>
 {% endif %}
+
+<form action="">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name">
+    <input type="submit" value="submit">
+</form>
+<div id="guestbook">
+    <h1>Guestbook</h1>
+    {% for item in writings %}
+        <p>{{ item[0] }} says {{ item[1] }}</p>
+    {% endfor %}
+</div>
 </body>
 </html>
