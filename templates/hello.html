@@ -25,7 +25,7 @@
 <div id="guestbook">
     <h1>Guestbook</h1>
     {% for item in writings %}
-        <p>{{ item[0] }} says {{ item[1] }}</p>
+        <p>{{ item["name"] }} says {{ item["message"] }}</p>
     {% endfor %}
 </div>
 </body>
