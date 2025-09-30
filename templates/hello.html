@@ -15,15 +15,17 @@
 <h2>and hello to {{name}}</h2>
 {% endif %}
 
-<form action="guestbook">
+<form action="guestbook" method="post">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name">
+    <label for="message">Message:</label>
+    <input type="text" id="message" name="message">
     <input type="submit" value="submit">
 </form>
 <div id="guestbook">
     <h1>Guestbook</h1>
     {% for item in writings %}
-        <p>{{ item[0] }} says hi</p>
+        <p>{{ item[0] }} says {{ item[1] }}</p>
     {% endfor %}
 </div>
 </body>
